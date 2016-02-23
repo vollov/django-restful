@@ -2,11 +2,11 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
 from rest_framework import routers
-from account import views
-
+import account, content
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'groups', views.GroupViewSet)
+router.register(r'users', account.views.UserViewSet)
+router.register(r'groups', account.views.GroupViewSet)
+router.register(r'pages', content.views.PageViewSet)
 
 urlpatterns = [
     url(r'^i18n/', include('django.conf.urls.i18n')),

@@ -41,6 +41,7 @@ INSTALLED_APPS = (
 #     'account',
     'rest_framework',
     'account',
+    'content',
 )
 
 MIDDLEWARE_CLASSES = (
